@@ -96,7 +96,7 @@ Alice Brown,alice@example.com
 
 ---
 
-## Step 7 — Using the App
+## Step 6 — Using the App
 
 1. Go to `https://yourdomain.com/certgen/` → you'll see the login page
 2. Log in with your credentials from `config.php`
