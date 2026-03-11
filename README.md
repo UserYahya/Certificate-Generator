@@ -18,15 +18,15 @@ certgen/
 ├── .htaccess            ← Security rules
 │
 ├── libs/
-│   ├── SimpleSMTP.php   ← Built-in SMTP (no Composer needed)
+│   ├── CertMailer.php   ← Built-in SMTP (no Composer needed)
 │   ├── fpdf/
-│   │   └── fpdf.php     ← Download from fpdf.org
+│   │   └── X     ← Download from fpdf.org, and place everything here
 │   └── fpdi/
 │       ├── autoload.php
 │       └── src/         ← Download from github.com/setasign/fpdi
 │
 ├── fonts/
-│   └── custom/          ← Place downloaded .ttf font files here
+│   └── custom/          ← The folder where custom fonts will be stored
 │
 ├── uploads/             ← Must be writable (chmod 755)
 ├── temp/                ← Must be writable (chmod 755)
@@ -58,7 +58,7 @@ define('SMTP_FROM_NAME',  'Your Organization');
 
 1. Go to: https://www.fpdf.org/
 2. Download the latest FPDF release (fpdf18x.zip)
-3. Extract and place `fpdf.php` into: `libs/fpdf/fpdf.php`
+3. Extract all the files into: `libs/fpdf/` folder
 
 ---
 
