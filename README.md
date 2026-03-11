@@ -73,28 +73,8 @@ FPDI allows overlaying text onto existing PDF templates.
 
 So the path should be: `libs/fpdi/src/Fpdi.php` etc.
 
----
 
-## Step 4 — Download Custom Fonts (optional but recommended)
-
-Download these TTF files from Google Fonts (fonts.google.com):
-
-| Font Name        | TTF filename to save as                  |
-|-----------------|------------------------------------------|
-| Great Vibes      | `GreatVibes-Regular.ttf`                 |
-| Pinyon Script    | `PinyonScript-Regular.ttf`               |
-| Parisienne       | `Parisienne-Regular.ttf`                 |
-| Libre Caslon Text| `LibreCaslonText-Regular.ttf`            |
-
-Place all TTF files in: `fonts/custom/`
-
-> **Note:** Garamond and Baskerville fall back to Times New Roman in PDF output
-> (they render correctly in the canvas preview via Google Fonts web).
-> For perfect PDF output, download EB Garamond or Libre Baskerville TTFs too.
-
----
-
-## Step 5 — Set Folder Permissions
+## Step 4 — Set Folder Permissions
 
 In cPanel File Manager, right-click and set permissions to **755** on:
 - `uploads/`
@@ -103,7 +83,7 @@ In cPanel File Manager, right-click and set permissions to **755** on:
 
 ---
 
-## Step 6 — CSV Format
+## Step 5 — CSV Format
 
 Your CSV must have at minimum a `Name` column. For email sending, add an `Email` column:
 
@@ -132,24 +112,9 @@ Alice Brown,alice@example.com
 
 ---
 
-## Anti-Spam Measures Implemented
-
-- Proper SMTP authentication (not PHP mail())
-- Plain-text alternative body included
-- Message-ID header set
-- X-Mailer header identifies sender
-- 300ms delay between emails to avoid rate limits
-- Personalized body (reduces spam score vs bulk identical emails)
-- HTML + Plain text multipart format
-- SPF/DKIM: Make sure your domain has SPF and DKIM records set up in cPanel → Email → Email Deliverability
-
----
-
 ## Batch Size
 
 Default batch size is **50 emails per batch** (set in config.php as `BATCH_SIZE`).
-
-For 350 emails with the "Send All" button, it will automatically run ~7 batches with a 1.5-second pause between each. Total time: roughly 5–10 minutes depending on your SMTP server.
 
 ---
 
